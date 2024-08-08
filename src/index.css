@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Readex Pro", sans-serif;
+}
+
+@layer base {
+  :root {
+      /* tailwind variables Light*/
+      --main-color-background: 246, 246, 248;
+      --main-color: 19, 102, 255;
+      --main-color-hover: 55, 123, 246;
+      --section-color: 255, 255, 255;
+      --section-color-focus: 249, 249, 251;
+      --section-color-hover: 242, 242, 242;
+      --color-text-1: 27, 35, 56;
+      --color-text-2: 155, 156, 160;
+      --color-border: 226, 232, 240;
+  }
+}
+
+:root {
+  /* css variables Light*/
+  --main-color-background-css: rgb(246, 246, 248);
+  --main-color-css: rgb(19, 102, 255);
+  --main-color-hover-css: rgb(55, 123, 246);
+  --section-color-css: rgb(255, 255, 255);
+  --section-color-focus-css: rgb(249, 249, 251);
+  --section-color-hover-css: rgb(242, 242, 242);
+  --color-text-1-css: rgb(27, 35, 56);
+  --color-text-2-css: rgb(155, 156, 160);
+  --color-border-css: rgb(226, 232, 240);
+}
+
+body {
+  background: var(--main-color-background-css);
+  transition: 0.15s;
+  overflow-x: hidden;
+  
+}
+body.dark{
+  /* tailwind variables Dark*/
+  --main-color-background: 0, 0, 0;
+  --main-color: 19, 102, 255;
+  --main-color-hover: 55, 123, 246;
+  --section-color: 20, 20, 20;
+  --section-color-focus: 33, 33, 33;
+  --section-color-hover: 64, 64, 64;
+  --color-text-1: 217, 217, 217;
+  --color-text-2: 100, 100, 100;
+  --color-border: 48, 48, 48;
+
+/* css variables Dark*/
+  --main-color-background-css: rgb(0, 0, 0);
+  --main-color-css: rgb(19, 102, 255);
+  --main-color-hover-css: rgb(55, 123, 246);
+  --section-color-css: rgb(20, 20, 20); 
+  --section-color-focus-css: rgb(33, 33, 33);
+  --section-color-hover-css: rgb(64, 64, 64);
+  --color-text-1-css: rgb(217, 217, 217);
+  --color-text-2-css: rgb(100, 100, 100);
+  --color-border-css: rgb(48, 48, 48);
+}
+
+.modal-show{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-hide{
+  opacity: 0;
+  visibility: hidden;
+}
+.loginF{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  background: #121212;
+  background: linear-gradient(
+    135deg,
+    #121212 25%,
+    #1a1a1a 25%,
+    #1a1a1a 50%,
+    #121212 50%,
+    #121212 75%,
+    #1a1a1a 75%,
+    #1a1a1a
+  );
+  background-size: 40px 40px;
+
+  /* Animation */
+  animation: move 4s linear infinite;
+}
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
